@@ -31,7 +31,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build content
         run: |
-          pip install pyyaml mistune jinja2
+          pip install pyyaml "mistune<=2" jinja2
           make
           mkdir _site
           rm -f README.html
